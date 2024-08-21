@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game Exercise</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="left-panel">
+        <h1 class="modal-text">Lets begin!</h1>
+
+        <div class="action-container">
+          <button id="start" class="action-button" onclick="startGame()">
+            Play
+          </button>
+
+          <button
+            id="reset"
+            class="action-button disabled"
+            onclick="resetGame()"
+            disabled
+          >
+            Reset
+          </button>
+
+          <button id="leave" class="action-button" onclick="leaveGame()">
+            Leave
+          </button>
+        </div>
+      </div>
+
+      <div id="right-panel">
+        <div class="difficulty-container">
+          <h2 class="difficulty-text">Choose difficulty</h2>
+
+          <button
+            id="normal"
+            class="difficulty-button"
+            onclick="normalDiff()"
+          ></button>
+
+          <button
+            id="nightmare"
+            class="difficulty-button"
+            onclick="hardDiff()"
+          ></button>
+
+          <button
+            id="hell"
+            class="difficulty-button"
+            onclick="masterDiff()"
+          ></button>
+
+          <button
+            id="inferno"
+            class="difficulty-button"
+            onclick="tornmentDiff()"
+          ></button>
+        </div>
+
+        <div id="creator">
+          <p class="creator-text">
+            Created by
+            <a
+              href="https://github.com/TisteEdur"
+              target="_blank"
+              class="creator-link"
+              >Anton Grigorov</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <main class="content">
+        <div class="crown">
+          <img src="./assets/crown.png" alt="" class="crown-img" />
+        </div>
+
+        <div id="timer">
+          <p id="timer-text">Remaining Time:</p>
+          <p id="timer-data">60</p>
+        </div>
+
+        <div id="game"></div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
