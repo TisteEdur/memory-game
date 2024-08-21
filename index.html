@@ -21,7 +21,8 @@
           <button
             id="reset"
             class="action-button disabled"
-            onclick="resetGame()"
+            value="60"
+            onclick="resetGame(this.value)"
             disabled
           >
             Reset
@@ -40,25 +41,29 @@
           <button
             id="normal"
             class="difficulty-button"
-            onclick="normalDiff()"
+            value="60"
+            onclick="normalDiff(this.value)"
           ></button>
 
           <button
             id="nightmare"
             class="difficulty-button"
-            onclick="hardDiff()"
+            value="50"
+            onclick="nightmareDiff(this.value)"
           ></button>
 
           <button
             id="hell"
             class="difficulty-button"
-            onclick="masterDiff()"
+            value="40"
+            onclick="hellDiff(this.value)"
           ></button>
 
           <button
             id="inferno"
             class="difficulty-button"
-            onclick="tornmentDiff()"
+            value="30"
+            onclick="infernoDiff(this.value)"
           ></button>
         </div>
 

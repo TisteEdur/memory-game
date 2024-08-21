@@ -65,6 +65,10 @@ const rightPanel = document.getElementById('right-panel');
 const startButton = document.getElementById('start');
 const resetButton = document.getElementById('reset');
 const leaveButton = document.getElementById('leave');
+const normalDiffButton = document.getElementById('normal');
+const nightmareDiffButton = document.getElementById('nightmare');
+const hellDiffButton = document.getElementById('hell');
+const infernoDiffButton = document.getElementById('inferno');
 let timerData = document.getElementById('timer-data');
 const game = document.getElementById('game');
 const grid = document.createElement('section');
@@ -164,7 +168,6 @@ let clock = () => {
 
             timerData.textContent = timerCount.toString().padStart(2, '0');
 
-
             if (timerCount < 11) {
                 timerData.classList.add('last-seconds');
             }
@@ -223,21 +226,29 @@ let clock = () => {
 const normalDiff = () => {
     timerCount = 60;
     timerData.textContent = timerCount;
+
+    resetButton.setAttribute("value", 60);
 }
 
-const hardDiff = () => {
+const nightmareDiff = () => {
     timerCount = 50;
     timerData.textContent = timerCount;
+
+    resetButton.setAttribute("value", 50);
 }
 
-const masterDiff = () => {
+const hellDiff = () => {
     timerCount = 40;
     timerData.textContent = timerCount;
+
+    resetButton.setAttribute("value", 40);
 }
 
-const tornmentDiff = () => {
+const infernoDiff = () => {
     timerCount = 30;
     timerData.textContent = timerCount;
+
+    resetButton.setAttribute("value", 30);
 }
 
 const startGame = () => {
@@ -247,24 +258,19 @@ const startGame = () => {
     clock();
 };
 
-const resetGame = () => {
-    switch (timerCount) {
-        case 60:
-            timerCount = 60;
-            clearInterval(timer);
-            break
-        case 50:
-            timerCount = 50;
-            clearInterval(timer);
-            break
-        case 40:
-            timerCount = 40;
-            clearInterval(timer);
-            break
-        case 30:
-            timerCount = 30;
-            clearInterval(timer);
-            break
+const resetGame = (buttonValue) => {
+    if (buttonValue == 60) {
+        clearInterval(timer)
+        timerCount = 60;
+    } else if (buttonValue == 50) {
+        clearInterval(timer)
+        timerCount = 50;
+    } else if (buttonValue == 40) {
+        clearInterval(timer)
+        timerCount = 40;
+    } else if (buttonValue == 30) {
+        clearInterval(timer)
+        timerCount = 30;
     }
 
     firstGuess = '';
