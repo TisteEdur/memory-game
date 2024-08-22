@@ -223,32 +223,32 @@ let clock = () => {
     }, 400);
 }
 
-const normalDiff = () => {
+const normalDiff = (buttonValue) => {
     timerCount = 60;
     timerData.textContent = timerCount;
 
-    resetButton.setAttribute("value", 60);
+    resetButton.setAttribute("value", buttonValue);
 }
 
-const nightmareDiff = () => {
+const nightmareDiff = (buttonValue) => {
     timerCount = 50;
     timerData.textContent = timerCount;
 
-    resetButton.setAttribute("value", 50);
+    resetButton.setAttribute("value", buttonValue);
 }
 
-const hellDiff = () => {
+const hellDiff = (buttonValue) => {
     timerCount = 40;
     timerData.textContent = timerCount;
 
-    resetButton.setAttribute("value", 40);
+    resetButton.setAttribute("value", buttonValue);
 }
 
-const infernoDiff = () => {
+const infernoDiff = (buttonValue) => {
     timerCount = 30;
     timerData.textContent = timerCount;
 
-    resetButton.setAttribute("value", 30);
+    resetButton.setAttribute("value", buttonValue);
 }
 
 const startGame = () => {
