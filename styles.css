@@ -14,6 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: url(./assets/cursor.png), auto !important;
 }
 
 body {
@@ -222,19 +223,19 @@ body {
 
     & .action-button {
         padding: 0 2.5em;
-        width: 290px;
+        width: 315px;
         height: 55px;
         font-family: "Exocet-Blizzard", serif;
         border: none;
         font-size: 1.5rem;
         color: #BD9B4E;
-        box-shadow: 0px 2px 9px black;
-        font-size: 18px;
+        font-size: 1.125rem;
         text-align: center;
-        background-size: auto 100%;
-        background-position: left, right, center;
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat, no-repeat, repeat-x;
-        background-image: url(./assets/button-left.webp), url(./assets/button-right.webp), url(./assets/button-base.webp);
+        background-image: url(./assets/button.png);
+        background-color: transparent;
         position: relative;
         transition: all 0.2s ease;
         cursor: pointer;
